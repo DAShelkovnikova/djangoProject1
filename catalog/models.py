@@ -41,12 +41,8 @@ class Product(models.Model):
         verbose_name="Изображение продукта",
         help_text="Загрузите изображение продукта",
     )
-    manufactured_at = models.DateField(
-        verbose_name="Дата производства",
-        blank=True,
-        null=True,
-        help_text="Укажите дату производства",
-    )
+
+
     category = models.ForeignKey(
         Category,
         on_delete=models.SET_NULL,

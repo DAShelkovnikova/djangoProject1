@@ -83,7 +83,7 @@ WSGI_APPLICATION = 'djangoProject1.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql_psycopg2',
-        'NAME': 'Sky',
+        'NAME': 'New',
         'USER': 'postgres',
         'PASSWORD': '1234',
         'HOST': 'localhost',
