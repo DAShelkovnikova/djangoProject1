@@ -1,0 +1,58 @@
+[
+{
+    "model": "catalog.category",
+    "pk": 2,
+    "fields": {
+        "name": "Кисти",
+        "description": "Кисти для рисования"
+    }
+},
+{
+    "model": "catalog.product",
+    "pk": 4,
+    "fields": {
+        "name": "Шпатель",
+        "description": "Металлический шпатель",
+        "image": "",
+        "category": 2,
+        "price": 200,
+        "created_at": null,
+        "updated_at": null,
+        "views_counter": 0,
+        "is_published": true,
+        "slug": null
+    }
+},
+{
+    "model": "catalog.product",
+    "pk": 5,
+    "fields": {
+        "name": "Кисть мягкая",
+        "description": "Кисть из колонка",
+        "image": "",
+        "category": 2,
+        "price": 20,
+        "created_at": null,
+        "updated_at": null,
+        "views_counter": 0,
+        "is_published": true,
+        "slug": null
+    }
+},
+{
+    "model": "catalog.product",
+    "pk": 6,
+    "fields": {
+        "name": "Кисть жестка",
+        "description": "Кисть из щетины",
+        "image": "",
+        "category": 2,
+        "price": 30,
+        "created_at": null,
+        "updated_at": null,
+        "views_counter": 0,
+        "is_published": true,
+        "slug": null
+    }
+}
+]
