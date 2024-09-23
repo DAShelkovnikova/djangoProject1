@@ -1,23 +1,10 @@
-import contact
-
 from catalog.apps import CatalogConfig
 from django.urls import path
-from catalog.views import products_list
+from catalog.views import products_list, product_detail
 
 app_name = CatalogConfig.name
+
 urlpatterns = [
-    path('', products_list),
-    # path('', home, name='home'),
-    # path('contacts/', contact, name='contacts')
+    path('', products_list, name='products_list'),
+    path('products/<int:pk>/', product_detail, name='product_detail')
 ]
-
-
-
-
-# from django.urls import path
-# from . import views
-#
-# urlpatterns = [
-#
-#     path('', views.index_view, name='index')
-# ]
