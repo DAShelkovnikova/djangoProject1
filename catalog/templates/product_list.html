@@ -10,7 +10,6 @@
             <img src="{{ product.image | media_filter }}" width='300' height='300'>
             <div class="card-body">
               <p class="card-text">{{ product.name }}.</p>
-              <p>{{ description|truncatechars:100 }}</p>
               <div class="d-flex justify-content-between align-items-center">
                 <div class="btn-group">
                   <a class="btn btn-warning" href="{% url 'catalog:product_detail' product.pk %}" role="button">Подробнее</a>
