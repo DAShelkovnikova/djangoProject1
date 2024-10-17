@@ -9,6 +9,18 @@ from catalog.models import Product, Version
 class ProductListView(ListView):
     model = Product
 
+    def get_queryset(self, *args, **kwargs):
+        queryset = super().get_queryset(*args, **kwargs)
+        queryset = queryset.filter(is_published=True)
+        return queryset
+
+    def get_context_data(self, *args, object_list=None, **kwargs):
+        context_data = super().get_context_data(**kwargs)
+        for product in context_data['object_list']:
+            active_version = Version.objects.filter(product=product, sign=True).first()
+            product.active_version = active_version
+        return context_data
+
 
 class ProductDetailView(DetailView):
     model = Product
